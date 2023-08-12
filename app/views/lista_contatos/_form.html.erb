@@ -1,0 +1,38 @@
+<%= form_with(model: lista_contato) do |form| %>
+  <% if lista_contato.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(lista_contato.errors.count, "error") %> prohibited this lista_contato from being saved:</h2>
+
+      <ul>
+        <% lista_contato.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :Primeiro_Nome, style: "display: block" %>
+    <%= form.text_field :Primeiro_Nome, class:"form-control", placeholder:"Primeiro Nome" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Ultimo_Nome, style: "display: block" %>
+    <%= form.text_field :Ultimo_Nome, class:"form-control", placeholder:"Último Nome" %>
+  </div>
+
+  <div class="form-group" 
+    <%= form.label :Email, style: "display: block" %>
+    <%= form.text_field :Email, class:"form-control", placeholder:"email@email.com" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Telefone, style: "display: block" %>
+    <%= form.text_field :Telefone, class:"form-control", placeholder:"+55 21 99999-9999" %>
+  </div>
+
+  <div class="form-group">
+    <BR>
+    <%= form.submit class:"btn btn-secondary" %>
+  </div>
+<% end %>

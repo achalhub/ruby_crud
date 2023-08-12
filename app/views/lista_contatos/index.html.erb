@@ -1,0 +1,43 @@
+<p style="color: green"><%= notice %></p>
+
+
+<h1>Lista contatos</h1>
+
+<table class="table table-dark table-striped table-bordered table-hover">
+  <tr>
+    <th>Nome</th>
+    <th>Último Nome</th>
+    <th>E-mail</th>
+    <th>Telefone</th>
+    <th>Configuração</th>
+  </tr>
+
+  <% @lista_contatos.each do |lista| %>
+    <tr>
+      <td><%= lista.Primeiro_Nome %></td>
+      <td><%= lista.Ultimo_Nome %></td>
+      <td><%= lista.Email %></td>
+      <td><%= lista.Telefone %></td>
+      <td><%= link_to "Editar contato", lista, class:"btn btn-secondary"%>  <%= link_to "", @lista_contato, method: :delete%></td>
+    </tr>
+  <% end %>
+</table>
+
+
+
+<!--
+<div id="lista_contatos">
+  <% @lista_contatos.each do |lista_contato| %>
+    <%= render lista_contato %>
+    <p>
+      <%= link_to "Editar contato", lista_contato %>
+    </p>
+  <% end %>
+</div>
+-->
+
+
+
+
+<%= link_to "Novo contato", new_lista_contato_path, class:"btn btn-secondary" %>
+

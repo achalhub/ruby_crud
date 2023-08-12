@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+
+
+
+
+
+<%= render @lista_contato %>
+
+
+
+<div style="text-align: center;">
+  <%= link_to "Editar este contato", edit_lista_contato_path(@lista_contato), class:"btn btn-secondary" %> 
+  <%= link_to "Voltar para a lista de contatos", lista_contatos_path, class:"btn btn-secondary" %>
+  <br>
+  <br>  
+  <div>
+    <%= button_to "Deletar o Contato", @lista_contato, method: :delete, class:"btn btn-danger" %>
+  <div>
+</div>
+

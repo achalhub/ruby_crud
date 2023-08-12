@@ -1,0 +1,10 @@
+<h1>Editing lista contato</h1>
+
+<%= render "form", lista_contato: @lista_contato %>
+
+<br>
+
+<div>
+  <%= link_to "Mostrar a lista de contato", @lista_contato, class:"btn btn-secondary" %> |
+  <%= link_to "Voltar para a lista de contatos", lista_contatos_path, class:"btn btn-dark" %>
+</div>
